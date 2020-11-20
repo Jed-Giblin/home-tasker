@@ -1,0 +1,15 @@
+{% block login_form %}
+    <form class="col-lg-6 offset-lg-3 ">
+        <div class="row justify-content-center">
+            {% csrf_token %}
+            <div class="form-group text-center">
+                <label for="user">Username</label>
+                <input id="user" type="text" class="form-control"/>
+                <label for="pass">Password</label>
+                <input id="pass" type="password" class="form-control"/>
+                <br>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

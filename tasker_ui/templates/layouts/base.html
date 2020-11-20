@@ -1,0 +1,74 @@
+<!--
+=========================================================
+* * Black Dashboard - v1.0.1
+=========================================================
+* Product Page: https://www.creative-tim.com/product/black-dashboard
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Coded by Creative Tim
+=========================================================
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Static assets -->
+{% load static %}
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/apple-icon.png' %}">
+    <link rel="icon" type="image/png" href="{% static 'assets/img/favicon.png' %}">
+
+    <title>
+        Courtside Consignment
+    </title>
+
+    {# Load the tag library #}
+    {% load bootstrap4 %}
+    {# Load CSS and JavaScript #}
+    {% bootstrap_javascript jquery='full' %}
+
+{#    <!--     Fonts and icons     -->#}
+{#    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet"/>#}
+{#    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">#}
+
+    <!-- Nucleo Icons -->
+    <link href="{% static 'assets/css/nucleo-icons.css' %}" rel="stylesheet"/>
+    <!-- CSS Files -->
+    <link href="{% static 'assets/css/darkly.css' %}" rel="stylesheet"/>
+    <link href="{% static 'assets/css/tasker.css' %}" rel="stylesheet"/>
+
+    <script type="text/javascript" src="{% static 'assets/js/tasker.js' %}" rel="script"></script>
+
+    <!-- Specific Page CSS goes HERE  -->
+    {% block stylesheets %}{% endblock stylesheets %}
+
+</head>
+
+<body class="">
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+<div class="navbar navbar-inverse navbar-fixed-top bg-secondary">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Home Tasker</a>
+        </div>
+        <ul class="nav navbar-nav" style="float: right">
+            <li><a href="#" class="navbar-nav pull-right tasker-login">Login</a></li></li>
+        </ul>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="content">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+</div>
+</body>
+
+</html>
